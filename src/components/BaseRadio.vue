@@ -3,10 +3,10 @@
     type="radio"
     :checked="modelValue === value"
     :value="value"
-    @change="$emit('update:modelValue', value)"
     v-bind="$attrs"
+    @change="$emit('update:modelValue', value)"
   />
-  <label>Yes</label>
+  <label v-if="label">{{ label }}</label>
 </template>
 
 <script>
